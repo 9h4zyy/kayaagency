@@ -1,0 +1,38 @@
+{
+  "version": "0.4",
+  "title": "Kaya Chat Agency - Header",
+  "type": "header",
+  "content": [
+    {
+      "id": "sec_hdr",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "layout": "full_width",
+        "gap": "no"
+      },
+      "elements": [
+        {
+          "id": "col_hdr",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "widget_hdr",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<header class=\"site-header\">\n    <nav class=\"navbar-capsule\" aria-label=\"Main Navigation\">\n      <a href=\"#home\" class=\"site-logo-link\" aria-label=\"Kaya Chat Home\">\n        <img src=\"http://kayachatagency.com/wp-content/uploads/2026/11/logo-kaya.webp\" alt=\"Kaya Chat Logo\" width=\"38\" height=\"38\" class=\"site-logo\">\n      </a>\n      <ul class=\"nav-menu\">\n        <li><a href=\"#home\" class=\"nav-link\">Home</a></li>\n        <li><a href=\"#agent-vs-host\" class=\"nav-link\">Host</a></li>\n        <li><a href=\"#agency-registration\" class=\"nav-link\">Agent</a></li>\n        <li><a href=\"#tutorial\" class=\"nav-link\">Withdraw</a></li>\n        <li><a href=\"#footer\" class=\"nav-link\">Contact</a></li>\n      </ul>\n      <button type=\"button\" class=\"nav-toggle-btn\" id=\"headerNavToggle\" aria-label=\"Toggle navigation menu\" aria-expanded=\"false\">\n        <span></span>\n        <span></span>\n        <span></span>\n      </button>\n    </nav>\n    <div class=\"mobile-nav-drawer\" id=\"headerMobileNav\" aria-hidden=\"true\">\n      <a href=\"#home\" class=\"nav-link mobile-link\">Home</a>\n      <a href=\"#agent-vs-host\" class=\"nav-link mobile-link\">Host</a>\n      <a href=\"#agency-registration\" class=\"nav-link mobile-link\">Agent</a>\n      <a href=\"#tutorial\" class=\"nav-link mobile-link\">Withdraw</a>\n      <a href=\"#footer\" class=\"nav-link mobile-link\">Contact</a>\n    </div>\n  </header> \n\n  <script>\n    (function () {\n      var navToggle = document.getElementById('headerNavToggle');\n      var mobileNav = document.getElementById('headerMobileNav');\n      var mobileLinks = document.querySelectorAll('.mobile-link');\n\n      if (navToggle && mobileNav) {\n        navToggle.addEventListener('click', function () {\n          var isOpen = mobileNav.classList.toggle('open');\n          navToggle.classList.toggle('active', isOpen);\n          navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');\n          mobileNav.setAttribute('aria-hidden', isOpen ? 'false' : 'true');\n        });\n\n        mobileLinks.forEach(function (link) {\n          link.addEventListener('click', function () {\n            mobileNav.classList.remove('open');\n            navToggle.classList.remove('active');\n            navToggle.setAttribute('aria-expanded', 'false');\n            mobileNav.setAttribute('aria-hidden', 'true');\n          });\n        });\n      }\n    })();\n  </script>"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": {}
+}
